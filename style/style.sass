@@ -28,37 +28,51 @@ ul
     list-style-type: none
     padding: 0
 
-.header-bottom 
+.header__top
+    .navbar
+        .container
+            h1
+                margin-left: 21px
+
+                @media screen and (max-width: 991px)
+                    margin-left: 0
+                    text-align: center
+                    
+
+.header__bottom 
     .navbar
         background-color: #0071b9
 
-.navbar-toggler-icon
-    padding: 1em 5em
-    color: $text-white
-    font-weight: 700
+        .container
+            button
+                .navbar-toggler-icon
+                    padding: 1em 5em
+                    color: $text-white
+                    font-weight: 700
 
-.navbar-nav
-    font-family: $roboto
-    font-size: 1.2em
-    font-weight: 500
+            .collapse
+                .navbar-nav
+                    font-family: $roboto
+                    font-size: 1.2em
+                    font-weight: 500
 
-    .nav-item
-        border-right: 1px solid #3f98d1
-        text-align: center
+                    .nav-item
+                        border-right: 1px solid #3f98d1
+                        text-align: center
 
-        &:last-child
-            border-right: none
+                        &:last-child
+                            border-right: none
 
-        @media screen and (max-width: 991px)
-            border: none
-            border-top: 1px solid #3f98d1
+                        @media screen and (max-width: 991px)
+                            border: none
+                            border-top: 1px solid #3f98d1
 
-        .nav-link
-            color: $text-white
-            padding: 1.2em 1.5em
+                        .nav-link
+                            color: $text-white
+                            padding: 1.2em 1.5em
 
-            &:hover
-                color: #ffd725
+                            &:hover
+                                color: #ffd725
 
 .form-control
     height: 0
