@@ -11,29 +11,73 @@ function search() {
 
 search();
 
+// $(document).ready(function () {
+//     $('.owl-carousel').owlCarousel({
+//         items: 3,
+//         loop: true,
+//         margin: 10,
+//         autoplay: true,
+//         autoplayTimeout: 5000,
+//         autoplayHoverPause: true,
+//         lazyLoad: true,
+//         responsiveClass: true,
+//         responsive: {
+//             0: {
+//                 items: 1,
+//                 nav: true
+//             },
+//             768: {
+//                 items: 2,
+//                 nav: true
+//             },
+//             1024: {
+//                 items: 3,
+//                 nav: true
+//             }
+//         }
+//     })
+// });
+
 $(document).ready(function () {
-    $('.owl-carousel').owlCarousel({
-        items: 3,
-        loop: true,
-        margin: 10,
+    $('.news-carousel').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
         autoplay: true,
-        autoplayTimeout: 5000,
-        autoplayHoverPause: true,
-        lazyLoad: true,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1,
-                nav: true
+        autoplaySpeed: 3000,
+        dots: true,
+        responsive: [{
+                breakpoint: 1265,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    dots: true
+                }
             },
-            768: {
-                items: 2,
-                nav: true
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    dots: true
+                }
             },
-            1024: {
-                items: 3,
-                nav: true
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true
+                }
             }
-        }
-    })
+        ]
+    });
 });

@@ -102,11 +102,12 @@ ul
 
                         .col-md-3
                             text-align: center
-                            border-right: 1px solid #00000020
+                            border-right: 1px solid rgba(0, 0, 0, 0.125)
+                            padding-right: 10px
 
                             @media screen and (max-width: 768px)
                                 border: none
-                                border-bottom: 1px solid #00000020
+                                border-bottom: 1px solid rgba(0, 0, 0, 0.125)
 
                             i
                                 font-size: 4em
@@ -125,7 +126,7 @@ ul
                                     margin-bottom: 10px
 
                                     a
-                                        text-decoration: underline
+                                        font-weight: 700
                                         transition: .3s ease
 
                                         &:hover
@@ -170,18 +171,25 @@ ul
     h2
         font-size: 2.5em
 
-    .item        
-        .card
-            transition: .5s ease
+    .news-carousel
+        .item
+            display: flex
+            justify-content: center
+            margin-bottom: 20px
 
-            &:hover
-                transform: translate(-5px, -5px)
-                box-shadow: 5px 5px #333333
+            .card
+                width: 90%
 
-            .card-body
-                p:last-child
-                    text-align: right
-                    color: #004978
+                @media screen and (max-width: 1265px)
+                    width: 75%
+
+                .card-body
+                    .d-flex
+                        justify-content: space-between
+                        align-items: center
+
+                        p
+                            color: #004978
 
 .flags
     margin: 50px 0

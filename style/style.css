@@ -119,13 +119,14 @@ ul {
 
 .ways .ways__content .row .col .card .row .col-md-3 {
   text-align: center;
-  border-right: 1px solid #00000020;
+  border-right: 1px solid rgba(0, 0, 0, 0.125);
+  padding-right: 10px;
 }
 
 @media screen and (max-width: 768px) {
   .ways .ways__content .row .col .card .row .col-md-3 {
     border: none;
-    border-bottom: 1px solid #00000020;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
   }
 }
 
@@ -148,7 +149,7 @@ ul {
 }
 
 .ways .ways__content .row .col .card .col-md-8 .card-body ul li a {
-  text-decoration: underline;
+  font-weight: 700;
   -webkit-transition: .3s ease;
   transition: .3s ease;
 }
@@ -206,20 +207,36 @@ ul {
   font-size: 2.5em;
 }
 
-.news .item .card {
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+.news .news-carousel .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
 }
 
-.news .item .card:hover {
-  -webkit-transform: translate(-5px, -5px);
-          transform: translate(-5px, -5px);
-  -webkit-box-shadow: 5px 5px #333333;
-          box-shadow: 5px 5px #333333;
+.news .news-carousel .item .card {
+  width: 90%;
 }
 
-.news .item .card .card-body p:last-child {
-  text-align: right;
+@media screen and (max-width: 1265px) {
+  .news .news-carousel .item .card {
+    width: 75%;
+  }
+}
+
+.news .news-carousel .item .card .card-body .d-flex {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.news .news-carousel .item .card .card-body .d-flex p {
   color: #004978;
 }
 
