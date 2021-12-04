@@ -1,3 +1,19 @@
+'use strict';
+
+function navDrop() {
+    let header = document.querySelector('header');
+
+    window.addEventListener('scroll', () => {
+        if (document.documentElement.scrollTop > 300) {
+            header.classList.add('fixed');
+        } else {
+            header.classList.remove('fixed');
+        }
+    });
+}
+
+navDrop();
+
 function search() {
     let srcPanel = document.querySelector('header .form-control');
     let srcIcon = document.querySelector('.search');
@@ -11,32 +27,27 @@ function search() {
 
 search();
 
-// $(document).ready(function () {
-//     $('.owl-carousel').owlCarousel({
-//         items: 3,
-//         loop: true,
-//         margin: 10,
-//         autoplay: true,
-//         autoplayTimeout: 5000,
-//         autoplayHoverPause: true,
-//         lazyLoad: true,
-//         responsiveClass: true,
-//         responsive: {
-//             0: {
-//                 items: 1,
-//                 nav: true
-//             },
-//             768: {
-//                 items: 2,
-//                 nav: true
-//             },
-//             1024: {
-//                 items: 3,
-//                 nav: true
-//             }
-//         }
-//     })
-// });
+function getAchieve() {
+    document.querySelectorAll('.achieve span').forEach(item => {
+        let numberTop = item.getBoundingClientRect().top;
+        let start = +item.innerHTML;
+        let end = +item.dataset.max;
+
+        window.addEventListener('scroll', function onScroll() {
+            if (window.scrollY > numberTop - window.innerHeight) {
+                this.removeEventListener('scroll', onScroll);
+                let interval = setInterval(function () {
+                    item.innerHTML = ++start;
+                    if (start == end) {
+                        clearInterval(interval);
+                    }
+                }, 20);
+            }
+        });
+    });
+}
+
+getAchieve();
 
 $(document).ready(function () {
     $('.news-carousel').slick({
