@@ -436,6 +436,107 @@ header .form-control.target {
   color: #333333;
 }
 
+.npa__content table th {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.15em;
+}
+
+.npa__content table tr {
+  text-align: center;
+}
+
+.npa__content table td a {
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.npa__content table td a:hover {
+  color: #ffd725;
+}
+
+.edition__content table th {
+  vertical-align: middle;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.15em;
+}
+
+@media screen and (max-width: 425px) {
+  .edition__content table th {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .edition__content table th {
+    font-size: 1em;
+  }
+}
+
+.edition__content table tr {
+  text-align: center;
+}
+
+.edition__content table td a {
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.edition__content table td a:hover {
+  color: #ffd725;
+}
+
+.edition__content table tbody th {
+  font-family: 'Raleway', sans-serif;
+}
+
+.govservices__content .row .col {
+  text-align: center;
+}
+
+.govservices__content .row .col ul li {
+  margin-bottom: 10px;
+}
+
+.govservices__content .row .col ul li a {
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.govservices__content .row .col ul li a:hover {
+  color: #ffd725;
+}
+
+.govservices__content .row .col:first-child {
+  border-right: 1px solid #dee2e6;
+}
+
+@media screen and (max-width: 767px) {
+  .govservices__content .row .col:first-child {
+    border: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .govservices__content .row .col:last-child {
+    margin-top: 50px;
+  }
+}
+
+.news__content ul li .card .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.news__content ul li .card .row .col-md-9 .card-body .card-title {
+  font-size: 2em;
+}
+
+.news__content ul li .card .row .col-md-9 .card-footer .card-text {
+  text-align: right;
+  color: #004978;
+}
+
 footer,
 footer a {
   color: #f2f2f2;

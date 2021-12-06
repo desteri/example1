@@ -4,6 +4,7 @@ $text-white: #ffffff
 html
     font-size: 14px
 
+
     @media screen and (max-width: 1024px)
         font-size: 12px
 
@@ -337,6 +338,93 @@ header
                         &:hover
                             background-color: #ffd725
                             color: #333333
+
+.npa__content
+    table
+        th
+            font-family: $roboto
+            font-size: 1.15em
+
+        tr
+            text-align: center
+        
+        td
+            a
+                transition: .3s ease
+
+                &:hover
+                    color: #ffd725
+
+.edition__content
+    table
+        th
+            vertical-align: middle
+            font-family: $roboto
+            font-size: 1.15em
+
+            @media screen and (max-width: 425px)
+                font-size: 1.2em
+
+            @media screen and (max-width: 320px)
+                font-size: 1em
+
+        tr
+            text-align: center
+        
+        td
+            a
+                transition: .3s ease
+
+                &:hover
+                    color: #ffd725
+        
+        tbody
+            th
+                font-family: 'Raleway', sans-serif
+
+.govservices__content
+    .row
+        .col
+            text-align: center
+
+            ul
+                li
+                    margin-bottom: 10px
+
+                    a
+                        transition: .3s ease
+
+                        &:hover
+                            color: #ffd725
+
+        .col
+            &:first-child
+                border-right: 1px solid #dee2e6
+
+                @media screen and (max-width: 767px)
+                    border: none
+        
+        .col
+            &:last-child
+               @media screen and (max-width: 767px)
+                    margin-top: 50px     
+
+.news__content
+    ul
+        li
+            .card
+                .row
+                    align-items: center
+
+                    .col-md-9
+                        .card-body
+                            .card-title
+                                font-size: 2em
+
+                        .card-footer
+                            .card-text
+                                text-align: right
+                                color: #004978
 
 footer,
 footer a
