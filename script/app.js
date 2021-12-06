@@ -1,20 +1,23 @@
 'use strict';
 
-function navDrop() {
+function navDropAndUp() {
     let header = document.querySelector('header');
+    let up = document.querySelector('.up');
 
     window.addEventListener('scroll', () => {
         if (document.documentElement.scrollTop > 300) {
             header.classList.add('fixed');
+            up.style.display = 'block';
         } else {
             header.classList.remove('fixed');
+            up.style.display = 'none';
         }
     });
 }
 
-navDrop();
+navDropAndUp();
 
-function search() {
+function getSearch() {
     let srcPanel = document.querySelector('header .form-control');
     let srcIcon = document.querySelector('.search');
 
@@ -25,7 +28,7 @@ function search() {
     });
 }
 
-search();
+getSearch();
 
 function getAchieve() {
     document.querySelectorAll('.achieve span').forEach(item => {

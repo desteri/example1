@@ -116,6 +116,29 @@ header
             padding: 1em
             padding-left: 3em
 
+.up
+    display: none
+    position: fixed
+    right: 50px
+    bottom: 50px
+    padding: 3px 1px
+    border-radius: 5px
+    background-color: #ffd725
+    cursor: pointer
+    transition: .3s ease
+    z-index: 9
+
+    &:hover
+        background-color: #ac911b
+
+    @media screen and (max-width: 1250px)
+        right: 10px
+        bottom: 10px
+
+    a
+        padding: 5px 7px
+        color: #ffffff
+
 .ways
     padding: 50px 0
     background-color: #FFFDF9
