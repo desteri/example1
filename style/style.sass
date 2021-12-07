@@ -25,6 +25,17 @@ h6
 h1
     font-size: 2em
 
+h2
+    &::after
+        content: ""
+        display: block
+        margin: 20px auto
+        background-color: #004978
+        width: 100px
+        height: 3px
+
+    
+
 a
     text-decoration: none
 
@@ -227,8 +238,12 @@ header
 .news
     background-color: #379BDC
 
-    h2
-        font-size: 2.5em
+    .container
+        h2
+            font-size: 2.5em
+
+            &::after
+                background-color: #ffffff
 
     .news-carousel
         .item
@@ -414,17 +429,97 @@ header
         li
             .card
                 .row
-                    align-items: center
-
                     .col-md-9
                         .card-body
                             .card-title
                                 font-size: 2em
 
+                                a
+                                    color: #333333
+                                    transition: .3s ease
+
+                                    &:hover
+                                        color: #ffd725
+
                         .card-footer
                             .card-text
                                 text-align: right
                                 color: #004978
+
+.news-details
+    .col
+        .card
+            .card-body
+                padding: 1rem 0
+
+                .card-title
+                    font-size: 2em
+
+                .card-subtitle
+                    color: #004978
+
+            .card-footer
+                padding: 0.5rem 0
+
+                button,
+                button a
+                    color: #333333
+                    font-size: 1.2em
+                    transition: .3s ease
+
+                    &:hover
+                        color: #ffd725
+
+.about__us
+    .row
+        .col
+            .card
+                border: none
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+
+                @media screen and (max-width: 767px)
+                    width: 75%
+                    margin: 0 auto
+
+                @media screen and (max-width: 576px)
+                    width: 100%
+
+    .general
+        .col
+            .card
+                width: 50%
+                margin: 0 auto
+
+                @media screen and (max-width: 767px)
+                    width: 75%
+                
+                @media screen and (max-width: 576px)
+                    width: 100%
+
+.contacts
+    .row
+        .col
+            .list
+                .list-item
+                    margin-bottom: 30px
+
+                    h6
+                        font-size: 1.3em
+
+                        i
+                            color: #004978
+                            padding-right: 15px
+
+                    ul
+                        li
+                            font-size: 1.1em
+
+                            a
+                                color: #333333
+                                transition: .3s ease
+
+                                &:hover
+                                    color: #ffd725
 
 footer,
 footer a
@@ -509,3 +604,16 @@ footer a
     .col-lg-4:last-child
         @media screen and (max-width: 768px)
                 text-align: center
+
+@media print
+    body *
+        visibility: hidden
+
+        .news-details, 
+        .news-details *
+            visibility: visible
+        
+        .news-details
+            position: absolute
+            left: 0
+            top: 0
