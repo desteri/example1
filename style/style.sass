@@ -458,17 +458,17 @@ header
                 .card-subtitle
                     color: #004978
 
-            .card-footer
-                padding: 0.5rem 0
+        .d-flex
+            padding: 0.5rem 0
 
-                button,
-                button a
-                    color: #333333
-                    font-size: 1.2em
-                    transition: .3s ease
+            button,
+            button a
+                color: #333333
+                font-size: 1.2em
+                transition: .3s ease
 
-                    &:hover
-                        color: #ffd725
+                &:hover
+                    color: #ffd725
 
 .about__us
     .row
@@ -609,11 +609,11 @@ footer a
     body *
         visibility: hidden
 
-        .news-details, 
-        .news-details *
+        .news-details .col .card,
+        .news-details .col .card *
             visibility: visible
         
-        .news-details
+        .news-details .col .card
             position: absolute
             left: 0
             top: 0

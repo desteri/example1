@@ -566,20 +566,20 @@ header .form-control.target {
   color: #004978;
 }
 
-.news-details .col .card .card-footer {
+.news-details .col .d-flex {
   padding: 0.5rem 0;
 }
 
-.news-details .col .card .card-footer button,
-.news-details .col .card .card-footer button a {
+.news-details .col .d-flex button,
+.news-details .col .d-flex button a {
   color: #333333;
   font-size: 1.2em;
   -webkit-transition: .3s ease;
   transition: .3s ease;
 }
 
-.news-details .col .card .card-footer button:hover,
-.news-details .col .card .card-footer button a:hover {
+.news-details .col .d-flex button:hover,
+.news-details .col .d-flex button a:hover {
   color: #ffd725;
 }
 
@@ -754,11 +754,11 @@ footer a {
   body * {
     visibility: hidden;
   }
-  body * .news-details,
-  body * .news-details * {
+  body * .news-details .col .card,
+  body * .news-details .col .card * {
     visibility: visible;
   }
-  body * .news-details {
+  body * .news-details .col .card {
     position: absolute;
     left: 0;
     top: 0;
