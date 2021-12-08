@@ -19,12 +19,14 @@ navDropAndUp();
 
 function getSearch() {
     let srcPanel = document.querySelector('header .form-control');
-    let srcIcon = document.querySelector('.search');
+    let srcIcon = document.querySelectorAll('.search');
 
-    srcIcon.addEventListener('click', (e) => {
-        e.preventDefault();
+    srcIcon.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
 
-        srcPanel.classList.toggle('target');
+            srcPanel.classList.toggle('target');
+        });
     });
 }
 
@@ -85,6 +87,7 @@ $(document).ready(function () {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
+                    arrows: false,
                     autoplay: true,
                     autoplaySpeed: 3000,
                     dots: true
@@ -95,6 +98,7 @@ $(document).ready(function () {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
+                    arrows: false,
                     autoplay: true,
                     autoplaySpeed: 3000,
                     dots: true
@@ -103,3 +107,174 @@ $(document).ready(function () {
         ]
     });
 });
+
+function getNewsItem() {
+    let cards = document.querySelector('.news__content ul');
+    const pages = [{
+            "src": "./img/news/1.png",
+            "title": "Кыргызпатент профинансирует патентные разработки",
+            "text": "Nulla non proin non diam. Aliquam morbi vestibulum, praesent condimentum. Vitae elementum pellentesque feugiat odio ornare blandit..."
+        },
+        {
+            "src": "./img/news/2.png",
+            "title": "Кыргызпатент профинансирует патентные разработки",
+            "text": "Nulla non proin non diam. Aliquam morbi vestibulum, praesent condimentum. Vitae elementum pellentesque feugiat odio ornare blandit..."
+        },
+        {
+            "src": "./img/news/3.png",
+            "title": "Кыргызпатент профинансирует патентные разработки",
+            "text": "Nulla non proin non diam. Aliquam morbi vestibulum, praesent condimentum. Vitae elementum pellentesque feugiat odio ornare blandit..."
+        },
+        {
+            "src": "./img/news/4.png",
+            "title": "Кыргызпатент профинансирует патентные разработки",
+            "text": "Nulla non proin non diam. Aliquam morbi vestibulum, praesent condimentum. Vitae elementum pellentesque feugiat odio ornare blandit..."
+        },
+        {
+            "src": "./img/news/5.png",
+            "title": "Кыргызпатент профинансирует патентные разработки",
+            "text": "Nulla non proin non diam. Aliquam morbi vestibulum, praesent condimentum. Vitae elementum pellentesque feugiat odio ornare blandit..."
+        },
+        {
+            "src": "./img/news/6.png",
+            "title": "Кыргызпатент профинансирует патентные разработки",
+            "text": "Nulla non proin non diam. Aliquam morbi vestibulum, praesent condimentum. Vitae elementum pellentesque feugiat odio ornare blandit..."
+        },
+        {
+            "src": "./img/news/7.png",
+            "title": "Кыргызпатент профинансирует патентные разработки",
+            "text": "Nulla non proin non diam. Aliquam morbi vestibulum, praesent condimentum. Vitae elementum pellentesque feugiat odio ornare blandit..."
+        },
+        {
+            "src": "./img/news/8.png",
+            "title": "Кыргызпатент профинансирует патентные разработки",
+            "text": "Nulla non proin non diam. Aliquam morbi vestibulum, praesent condimentum. Vitae elementum pellentesque feugiat odio ornare blandit..."
+        },
+        {
+            "src": "./img/news/9.png",
+            "title": "Кыргызпатент профинансирует патентные разработки",
+            "text": "Nulla non proin non diam. Aliquam morbi vestibulum, praesent condimentum. Vitae elementum pellentesque feugiat odio ornare blandit..."
+        },
+        {
+            "src": "./img/news/9.png",
+            "title": "Кыргызпатент профинансирует патентные разработки",
+            "text": "Nulla non proin non diam. Aliquam morbi vestibulum, praesent condimentum. Vitae elementum pellentesque feugiat odio ornare blandit..."
+        },
+        {
+            "src": "./img/news/8.png",
+            "title": "Кыргызпатент профинансирует патентные разработки",
+            "text": "Nulla non proin non diam. Aliquam morbi vestibulum, praesent condimentum. Vitae elementum pellentesque feugiat odio ornare blandit..."
+        },
+        {
+            "src": "./img/news/7.png",
+            "title": "Кыргызпатент профинансирует патентные разработки",
+            "text": "Nulla non proin non diam. Aliquam morbi vestibulum, praesent condimentum. Vitae elementum pellentesque feugiat odio ornare blandit..."
+        },
+        {
+            "src": "./img/news/6.png",
+            "title": "Кыргызпатент профинансирует патентные разработки",
+            "text": "Nulla non proin non diam. Aliquam morbi vestibulum, praesent condimentum. Vitae elementum pellentesque feugiat odio ornare blandit..."
+        },
+        {
+            "src": "./img/news/5.png",
+            "title": "Кыргызпатент профинансирует патентные разработки",
+            "text": "Nulla non proin non diam. Aliquam morbi vestibulum, praesent condimentum. Vitae elementum pellentesque feugiat odio ornare blandit..."
+        },
+        {
+            "src": "./img/news/4.png",
+            "title": "Кыргызпатент профинансирует патентные разработки",
+            "text": "Nulla non proin non diam. Aliquam morbi vestibulum, praesent condimentum. Vitae elementum pellentesque feugiat odio ornare blandit..."
+        },
+        {
+            "src": "./img/news/3.png",
+            "title": "Кыргызпатент профинансирует патентные разработки",
+            "text": "Nulla non proin non diam. Aliquam morbi vestibulum, praesent condimentum. Vitae elementum pellentesque feugiat odio ornare blandit..."
+        },
+        {
+            "src": "./img/news/2.png",
+            "title": "Кыргызпатент профинансирует патентные разработки",
+            "text": "Nulla non proin non diam. Aliquam morbi vestibulum, praesent condimentum. Vitae elementum pellentesque feugiat odio ornare blandit..."
+        },
+        {
+            "src": "./img/news/1.png",
+            "title": "Кыргызпатент профинансирует патентные разработки",
+            "text": "Nulla non proin non diam. Aliquam morbi vestibulum, praesent condimentum. Vitae elementum pellentesque feugiat odio ornare blandit..."
+        },
+        {
+            "src": "./img/news/5.png",
+            "title": "Кыргызпатент профинансирует патентные разработки",
+            "text": "Nulla non proin non diam. Aliquam morbi vestibulum, praesent condimentum. Vitae elementum pellentesque feugiat odio ornare blandit..."
+        },
+        {
+            "src": "./img/news/7.png",
+            "title": "Кыргызпатент профинансирует патентные разработки",
+            "text": "Nulla non proin non diam. Aliquam morbi vestibulum, praesent condimentum. Vitae elementum pellentesque feugiat odio ornare blandit..."
+        },
+        {
+            "src": "./img/news/2.png",
+            "title": "Кыргызпатент профинансирует патентные разработки",
+            "text": "Nulla non proin non diam. Aliquam morbi vestibulum, praesent condimentum. Vitae elementum pellentesque feugiat odio ornare blandit..."
+        },
+        {
+            "src": "./img/news/3.png",
+            "title": "Кыргызпатент профинансирует патентные разработки",
+            "text": "Nulla non proin non diam. Aliquam morbi vestibulum, praesent condimentum. Vitae elementum pellentesque feugiat odio ornare blandit..."
+        },
+        {
+            "src": "./img/news/9.png",
+            "title": "Кыргызпатент профинансирует патентные разработки",
+            "text": "Nulla non proin non diam. Aliquam morbi vestibulum, praesent condimentum. Vitae elementum pellentesque feugiat odio ornare blandit..."
+        },
+        {
+            "src": "./img/news/8.png",
+            "title": "Кыргызпатент профинансирует патентные разработки",
+            "text": "Nulla non proin non diam. Aliquam morbi vestibulum, praesent condimentum. Vitae elementum pellentesque feugiat odio ornare blandit..."
+        },
+        {
+            "src": "./img/news/1.png",
+            "title": "Кыргызпатент профинансирует патентные разработки",
+            "text": "Nulla non proin non diam. Aliquam morbi vestibulum, praesent condimentum. Vitae elementum pellentesque feugiat odio ornare blandit..."
+        },
+        {
+            "src": "./img/news/4.png",
+            "title": "Кыргызпатент профинансирует патентные разработки",
+            "text": "Nulla non proin non diam. Aliquam morbi vestibulum, praesent condimentum. Vitae elementum pellentesque feugiat odio ornare blandit..."
+        },
+        {
+            "src": "./img/news/6.png",
+            "title": "Кыргызпатент профинансирует патентные разработки",
+            "text": "Nulla non proin non diam. Aliquam morbi vestibulum, praesent condimentum. Vitae elementum pellentesque feugiat odio ornare blandit..."
+        },
+    ];
+    let item = '';
+
+    for (const prop of pages) {
+        item += `
+            <li class="card mb-4 border-0 border-bottom pb-4" style="max-width: 100%;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <a href="./news-details.html">
+                            <img src="${prop.src}" class="img-fluid" alt="...">
+                        </a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a href="./news-details.html">${prop.title}</a>
+                            </h5>
+                            <p class="card-text">${prop.text}</p>
+                        </div>
+                        <div class="card-footer border-0 bg-transparent">
+                            <a href="./news-details.html" class="btn btn-primary">Подробнее</a>
+                            <p class="card-text time"><time>24.11.2021</time></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        `
+    }
+
+    cards.insertAdjacentHTML('afterbegin', item);
+}
+
+getNewsItem();

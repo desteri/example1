@@ -64,12 +64,12 @@
 }
 
 .slick-prev {
-  left: -25px;
+  left: -50px;
 }
 
 [dir="rtl"] .slick-prev {
   left: auto;
-  right: -25px;
+  right: -50px;
 }
 
 .slick-prev:before {
@@ -80,9 +80,15 @@
   content: "→";
 }
 
-@media screen and (max-width: 1265px) {
+@media screen and (max-width: 1100px) {
   .slick-prev {
-    left: 10px;
+    left: -25px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .slick-prev {
+    left: -30px;
   }
 }
 
@@ -93,11 +99,11 @@
 }
 
 .slick-next {
-  right: -25px;
+  right: -50px;
 }
 
 [dir="rtl"] .slick-next {
-  left: -25px;
+  left: -50px;
   right: auto;
 }
 
@@ -109,9 +115,15 @@
   content: "←";
 }
 
-@media screen and (max-width: 1265px) {
+@media screen and (max-width: 1100px) {
   .slick-next {
-    right: 10px;
+    right: -25px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .slick-next {
+    right: -30px;
   }
 }
 

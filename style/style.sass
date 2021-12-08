@@ -43,7 +43,25 @@ ul
     list-style-type: none
     padding: 0
 
+body 
+    & > .container
+            .header-top
+                .navbar-brand
+                    margin-right: 0
+                    color: #333333
+                    font-size: 1em  
+                    white-space: normal
+
+                    @media screen and (max-width: 991px)
+                        img
+                            display: none
+
+                        h1
+                            text-align: center                  
+
 header
+    background-color: #3F9BF0
+
     &.fixed
         background-color: $text-white
         position: fixed
@@ -52,22 +70,60 @@ header
         left: 0
         z-index: 9999
 
+        .navbar
+            .container-fluid
+                .navbar-brand
+                    display: block
 
+                .offcanvas
+                    .offcanvas-body
+                        .navbar-nav
+                            .nav-item
+                                .nav-link
+                                    color: #333333
+
+    @media screen and (max-width: 991px)
+        background-color: $text-white
 
     .navbar
         .container-fluid
+            .navbar-brand
+                display: none
+
+                @media screen and (max-width: 991px)
+                    display: block
+
             .d-flex
                 a
                     display: none
+                    color: #333333
 
                     @media screen and (max-width: 991px)
                         display: block
 
                 button
                     i
-                        color: #333333
+                        color: $text-white
+
+                        @media screen and (max-width: 991px)
+                            color: #333333
 
             .offcanvas
+                width: 270px
+
+                &.show
+                    width: 270px
+
+                    .offcanvas-body
+                        .navbar-nav
+                            .nav-item
+                                .nav-link
+                                    border-bottom: 1px solid #f2f2f2
+
+                                &:last-child
+                                    .nav-link
+                                        border: none
+                                    
                 .offcanvas-body
                     .navbar-nav
                         font-family: $roboto
@@ -89,32 +145,24 @@ header
                                 @media screen and (max-width: 991px)
                                     display: block
 
-                            @media screen and (max-width: 991px)
-                                justify-content: left
-                                text-align: left
-
                             .nav-link
-                                color: #333333
+                                color: $text-white
                                 padding: 1.2em 1.5em
 
                                 &:hover
-                                    color: #3F9BF0
-
-                            .dropdown-menu
-                                min-width: 0
-
-                                &[data-bs-popper] 
-                                    left: 10px
+                                    color: #ffd725
 
                                 @media screen and (max-width: 991px)
-                                    background-color: transparent
-                                    text-align: left
-                                    border: none
-                                    padding: 0.5rem 10px
+                                    color: #333333
 
-                        .off-search form
-                            display: none
-    
+                            .dropdown-menu
+                                text-align: center
+                                border: none
+
+                            .search
+                                @media screen and (max-width: 991px)
+                                    display: none
+
     .form-control
         height: 0
         padding: 0 1em
@@ -228,6 +276,14 @@ header
                 color: #23628B
                 font-size: 2.5em
                 font-weight: 700
+
+                &::after
+                    content: ""
+                    display: block
+                    margin: 10px auto
+                    background-color: #004978
+                    width: 30px
+                    height: 2px
             
             p
                 margin-top: 5px
@@ -245,7 +301,17 @@ header
             &::after
                 background-color: #ffffff
 
+        @media screen and (max-width: 1265px)
+            max-width: 900px
+
+        @media screen and (max-width: 991px)
+            max-width: 800px
+        
+        @media screen and (max-width: 881px)
+            max-width: 700px
+
     .news-carousel
+
         .item
             display: flex
             justify-content: center
@@ -254,21 +320,19 @@ header
             .card
                 width: 90%
 
-                @media screen and (max-width: 1265px)
-                    width: 75%
-
                 .card-body
                     .d-flex
                         justify-content: space-between
                         align-items: center
 
                         .btn-primary
+                            background-color: #3F9BF0
+                            border-color: transparent
                             font-weight: 700
 
                             &:hover
                                 background-color: #ffd725
                                 color: #333333
-                                border-color: transparent
 
                         p
                             color: #004978
@@ -301,7 +365,9 @@ header
                         padding: 10px 5px
                         transition: .5s ease
 
-                        &:hover
+                        &:nth-child(4):hover,
+                        &:nth-child(5):hover,
+                        &:nth-child(6):hover
                             transform: translate(-5px, -5px)
                             box-shadow: 5px 5px #333333
                             background-color: #3F9BF0
@@ -426,25 +492,36 @@ header
 
 .news__content
     ul
-        li
-            .card
-                .row
-                    .col-md-9
-                        .card-body
-                            .card-title
-                                font-size: 2em
+        .card
+            .row
+                .col-md-8
+                    .card-body
+                        .card-title
+                            font-size: 2em
 
-                                a
-                                    color: #333333
-                                    transition: .3s ease
+                            a
+                                color: #333333
+                                transition: .3s ease
 
-                                    &:hover
-                                        color: #ffd725
+                                &:hover
+                                    color: #ffd725
 
-                        .card-footer
-                            .card-text
-                                text-align: right
-                                color: #004978
+                    .card-footer
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+
+                        .btn-primary
+                            background-color: #3F9BF0
+                            border-color: transparent
+                            font-weight: 700
+
+                            &:hover
+                                background-color: #ffd725
+                                color: #333333
+
+                        .card-text
+                            color: #004978
 
 .news-details
     .col
@@ -530,31 +607,35 @@ footer a
     padding-bottom: 50px
 
     .col
-        li
-            a
-                transition: .3s ease
+        ul
+            li
+                a
+                    transition: .3s ease
 
-                &:hover
-                    color: #3F9BF0
+                    &:hover
+                        color: #3F9BF0
 
     .col:nth-child(1)
-        .footer__first__col
-            > li:last-child
-                margin-top: 10px
+        & > ul
+            & > li:nth-child(2)
+                    margin-top: 10px
 
-                .social
-                    li
-                        a
-                            margin-right: 15px
-                            font-size: 1.7em
-    
-    .col:nth-child(2)
+                    ul
+                        li
+                            a
+                                margin-right: 15px
+                                font-size: 1.7em
+
+    .col:nth-child(2),
+    .col:nth-child(3),
+    .col:nth-child(4)
         padding-left: 50px
 
         @media screen and (max-width: 768px)
             padding-left: 10.5px
-
-        .footer__two__col
+    
+    .col:nth-child(2)
+        ul
             li:nth-child(1)
                 margin-bottom: 20px
 
@@ -562,13 +643,19 @@ footer a
                     text-transform: uppercase
 
     .col:nth-child(3)
-        margin-right: 0
-        padding-left: 50px
+        ul
+            li
+                a
+                    text-transform: uppercase
+                    font-weight: 700
+                    color: #ffd725
+                    transition: .3s ease
 
-        @media screen and (max-width: 768px)
-            padding-left: 10.5px
+                    &:hover
+                        color: #3F9BF0
 
-        .footer__three__col
+    .col:nth-child(4)
+        ul
             li
                 a
                     display: block
