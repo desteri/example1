@@ -63,6 +63,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.photo__content .slick-prev:before,
+.photo__content .slick-next:before {
+  color: #333333;
+}
+
 .slick-prev {
   left: -50px;
 }
