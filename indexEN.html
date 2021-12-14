@@ -20,43 +20,44 @@
 </head>
 
 <body>
-    <header class="border-bottom">
-        <form>
-            <input class="form-control me-2" type="search" placeholder="Введите текст для поиска..."
-                aria-label="Search">
-        </form>
+    <div class="container">
+        <div class="header-top my-2">
+            <a class="navbar-brand d-flex justify-content-center align-items-center" href="#">
+                <img src="./img/kyrgyzpatent-logo-general-180x107.png" alt="" width="90" height="53" class="me-5">
+                <h1>State Agency for Intellectual Property and Innovation under the Cabinet of Ministers of the Kyrgyz Republic</h1>
+            </a>
+        </div>
+    </div>
 
+    <header class="border-bottom">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="./index.html">
-                    <img src="./img/kyrgyzpatent-logo.png" alt="logo" width="85" height="50">
+                    <img src="./img/kyrgyzpatent-logo-general-180x107.png" alt="logo" width="90" height="53">
                 </a>
-                <div class="d-flex">
-                    <a class="nav-link search" href="#"><i class="fas fa-search"></i></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <i class="fas fa-bars"></i>
+                </button>
                 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
                     aria-labelledby="offcanvasNavbarLabel">
                     <div class="offcanvas-header">
                         <a class="navbar-brand" href="#">
-                            <img src="./img/kyrgyzpatent-logo.png" alt="logo" width="85" height="50">
+                            <img src="./img/kyrgyzpatent-logo-general-180x107.png" alt="logo" width="90" height="53">
                         </a>
                         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
                             aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <ul class="navbar-nav justify-content-center flex-grow-1">
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+                                <a class="nav-link" aria-current="page" href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./npa.html">Regulations</a>
+                                <a class="nav-link" href="./npa.html">NLA</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./edition.html">Edition</a>
+                                <a class="nav-link" href="./edition.html">Editions</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="./government-services.html">Government services</a>
@@ -528,12 +529,12 @@
     <footer>
         <div class="footer__top pt-3">
             <div class="container">
-                <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 justify-content-between">
+                <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-4 justify-content-between">
                     <div class="col">
                         <h6>About us</h6>
 
-                        <ul class="footer__first__col">
-                            <li>State Fund for Intellectual Property under the State Service for Intellectual Property and Innovation under the Government of the Kyrgyz Republic</li>
+                        <ul>
+                            <li>State Fund of Intellectual Property under the State Service of Intellectual Property and Innovation under the Government of the Kyrgyz Republic</li>
                             <li>
                                 <ul class="social d-flex">
                                     <li>
@@ -551,24 +552,34 @@
                     </div>
 
                     <div class="col">
-                        <h6>Address</h6>
+                        <h6>address</h6>
 
-                        <ul class="footer__two__col">
-                            <li>Kyrgyzpatent, st. Moscow 62, Bishkek 720049, Kyrgyz Republic</li>
-                            <li>Telephone: <a href="tel:+996312680471">+996 (312) 68 04 71</a></li>
+                        <ul>
+                            <li>Kyrgyzpatent, Moskovskaya str. 62, Bishkek city 720049, Kyrgyz Republic</li>
+                            <li>Tel: <a href="tel:+996312680471">+996 (312) 68 04 71</a></li>
                             <li>Cellphone: <a href="tel:+996701939328">+996 0701 939-328</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col">
+                        <h6>Announcement</h6>
+
+                        <ul>
+                            <li>
+                                <a href="#">Attention! Competition!</a>
+                            </li>
                         </ul>
                     </div>
 
                     <div class="col">
                         <h6>Menu</h6>
 
-                        <ul class="footer__three__col">
+                        <ul>
                             <li>
                                 <a href="#"><i class="fas fa-chevron-right"></i>Home</a>
                             </li>
                             <li>
-                                <a href="./edition.html"><i class="fas fa-chevron-right"></i>Edition</a>
+                                <a href="./edition.html"><i class="fas fa-chevron-right"></i>Editions</a>
                             </li>
                             <li>
                                 <a href="./news.html"><i class="fas fa-chevron-right"></i>News</a>
@@ -583,7 +594,7 @@
             <div class="container">
                 <div class="row justify-content-between">
                     <div class="col-lg-4">
-                        All rights reserved &copy; Kyrgyzpatent <time datetime="2021-01-01 12:00">2021</time>
+                        All rights reserved &copy; Kyrgyzpatent <time datetime="2021-01-01 12:00">2021</time>г.
                     </div>
 
                     <div class="col-lg-4">

@@ -31,6 +31,7 @@
   padding: 0;
   border: none;
   outline: none;
+  z-index: 9;
 }
 
 .slick-prev:hover, .slick-prev:focus,
@@ -63,9 +64,67 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.photo__content .slick-prev:hover, .photo__content .slick-prev:focus,
+.photo__content .slick-next:hover,
+.photo__content .slick-next:focus {
+  outline: none;
+  background: transparent;
+  color: transparent;
+}
+
+.photo__content .slick-prev:hover:before, .photo__content .slick-prev:focus:before,
+.photo__content .slick-next:hover:before,
+.photo__content .slick-next:focus:before {
+  color: #ffd725;
+}
+
 .photo__content .slick-prev:before,
 .photo__content .slick-next:before {
-  color: #333333;
+  color: #3F9BF0;
+  opacity: 1;
+  font-size: 30px;
+}
+
+.photo__content .slick-prev {
+  left: -50px;
+}
+
+[dir="rtl"] .photo__content .slick-prev {
+  left: auto;
+  right: -50px;
+}
+
+@media screen and (max-width: 1280px) {
+  .photo__content .slick-prev {
+    left: -25px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .photo__content .slick-prev {
+    left: 20px;
+  }
+}
+
+.photo__content .slick-next {
+  right: -50px;
+}
+
+[dir="rtl"] .photo__content .slick-next {
+  left: -50px;
+  right: auto;
+}
+
+@media screen and (max-width: 1280px) {
+  .photo__content .slick-next {
+    right: -25px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .photo__content .slick-next {
+    right: 30px;
+  }
 }
 
 .slick-prev {
