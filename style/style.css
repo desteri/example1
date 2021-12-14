@@ -47,6 +47,19 @@ ul {
   padding: 0;
 }
 
+ol {
+  margin-bottom: 0;
+  padding-left: 15px;
+}
+
+ol li {
+  margin-bottom: 10px;
+}
+
+ol li:last-child {
+  margin-bottom: 0;
+}
+
 body > .container .header-top .navbar-brand {
   margin-right: 0;
   color: #333333;
@@ -788,6 +801,68 @@ header .navbar .container-fluid .offcanvas .offcanvas-body .navbar-nav .nav-item
     text-align: center;
     margin-bottom: 30px;
   }
+}
+
+.kelechek .row .col p {
+  text-indent: 1.5em;
+}
+
+.kelechek .row .col p a {
+  font-weight: 700;
+}
+
+.on-eapo.container,
+.on-vois.container {
+  max-width: 1500px;
+}
+
+.on-eapo .row .col-lg-8 table thead tr,
+.on-vois .row .col-lg-8 table thead tr,
+.zas-izo .row .col-lg-8 table thead tr {
+  text-align: center;
+}
+
+.on-eapo .row .col-lg-8 table thead tr th,
+.on-vois .row .col-lg-8 table thead tr th,
+.zas-izo .row .col-lg-8 table thead tr th {
+  font-family: 'Raleway', sans-serif;
+  vertical-align: middle;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.15em;
+}
+
+@media screen and (max-width: 425px) {
+  .on-eapo .row .col-lg-8 table thead tr th,
+  .on-vois .row .col-lg-8 table thead tr th,
+  .zas-izo .row .col-lg-8 table thead tr th {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .on-eapo .row .col-lg-8 table thead tr th,
+  .on-vois .row .col-lg-8 table thead tr th,
+  .zas-izo .row .col-lg-8 table thead tr th {
+    font-size: 1em;
+  }
+}
+
+.on-eapo .row .col-lg-8 table tbody tr,
+.on-vois .row .col-lg-8 table tbody tr,
+.zas-izo .row .col-lg-8 table tbody tr {
+  text-align: left;
+}
+
+@media screen and (max-width: 991px) {
+  .on-eapo .row .col-lg-2,
+  .on-vois .row .col-lg-2,
+  .zas-izo .row .col-lg-2 {
+    text-align: center;
+  }
+}
+
+.zas-izo .row .col-lg-8 table tr tbody tr td:first-child {
+  text-align: center;
 }
 
 footer,
