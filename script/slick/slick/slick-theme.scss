@@ -154,6 +154,49 @@ $slick-opacity-not-active: 0.25 !default;
     }
 }
 
+.photo__content-one {
+    & .slick-prev,
+    & .slick-next {
+        &:hover, &:focus {
+            outline: none;
+            background: transparent;
+            color: transparent;
+            &:before {
+                color: #ffd725;
+            }
+        }
+        &:before {
+            color: #3F9BF0;
+            opacity: 1;
+            font-size: 30px;
+        }
+    }
+
+    & .slick-prev {
+        left: 50px;
+        [dir="rtl"] & {
+            left: auto;
+            right: 50px;
+        }
+
+        @media screen and (max-width: 1250px) {
+            left: 20px;
+        }
+    }
+
+    & .slick-next {
+        right: 50px;
+        [dir="rtl"] & {
+            left: 50px;
+            right: auto;
+        }
+
+        @media screen and (max-width: 1250px) {
+            right: 30px;
+        }
+    }
+}
+
 .slick-prev {
     left: -50px;
     [dir="rtl"] & {
