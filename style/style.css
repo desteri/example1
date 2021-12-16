@@ -865,6 +865,131 @@ header .navbar .container-fluid .offcanvas .offcanvas-body .navbar-nav .nav-item
   text-align: center;
 }
 
+.startap .row .col p a {
+  color: #333333;
+  font-weight: 700;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.startap .row .col p a:hover {
+  color: #ffd725;
+}
+
+.nebo .row .col .row .photo__content-one .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nebo .row .col .row p:last-child {
+  margin-bottom: 50px;
+}
+
+.nebo .row .col .row p a {
+  color: #333333;
+  font-weight: 700;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.nebo .row .col .row p a:hover {
+  color: #ffd725;
+}
+
+@media screen and (max-width: 768px) {
+  .nackonavt .row .col iframe {
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .nackonavt .row .col iframe {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .nackonavt .row .col iframe {
+    height: 250px;
+  }
+}
+
+.nackonavt .row .col ol {
+  list-style-type: none;
+  counter-reset: item;
+}
+
+.nackonavt .row .col ol li:first-child {
+  margin-top: 10px;
+}
+
+.nackonavt .row .col ol li:last-child {
+  margin-bottom: 30px;
+}
+
+.nackonavt .row .col ol li::before {
+  content: counter(item) ") ";
+  counter-increment: item;
+  padding-left: 10px;
+}
+
+.nackonavt .row .col p a {
+  color: #333333;
+  font-weight: 700;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.nackonavt .row .col p a:hover {
+  color: #ffd725;
+}
+
+.jash .row .col {
+  text-align: center;
+}
+
+.jash .row .col ul li {
+  margin-bottom: 10px;
+}
+
+.jash .row .col ul li a {
+  color: #333333;
+  font-weight: 700;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.jash .row .col ul li a:hover {
+  color: #ffd725;
+}
+
+.saamalik .saamalik__content ol li ol li {
+  margin-left: 30px;
+}
+
+.saamalik .saamalik__content ol li ol li:first-child {
+  margin-top: 10px;
+}
+
+.saamalik .saamalik__content ol li ol p {
+  margin-left: 30px;
+}
+
+.saamalik .saamalik__content p a {
+  color: #333333;
+  font-weight: 700;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.saamalik .saamalik__content p a:hover {
+  color: #ffd725;
+}
+
 footer,
 footer a {
   color: #f2f2f2;

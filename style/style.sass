@@ -705,7 +705,117 @@ header
                             td
                                 &:first-child
                                     text-align: center
-         
+
+.startap
+    .row
+        .col
+            p
+                a
+                    color: #333333
+                    font-weight: 700
+                    transition: .3s ease
+
+                    &:hover
+                        color: #ffd725
+
+.nebo
+    .row
+        .col
+            .row
+                .photo__content-one
+                    .item
+                        display: flex
+                        justify-content: center
+                p
+                    &:last-child
+                        margin-bottom: 50px
+
+                    a
+                        color: #333333
+                        font-weight: 700
+                        transition: .3s ease
+
+                        &:hover
+                            color: #ffd725
+
+.nackonavt
+    .row
+        .col
+            iframe
+                @media screen and (max-width: 768px)
+                    height: 450px
+                
+                @media screen and (max-width: 700px)
+                    height: 350px
+
+                @media screen and (max-width: 425px)
+                    height: 250px
+
+            ol
+                list-style-type: none
+                counter-reset: item
+
+                li
+                    &:first-child
+                        margin-top: 10px
+
+                    &:last-child
+                        margin-bottom: 30px
+
+                    &::before
+                        content: counter(item) ') '
+                        counter-increment: item
+                        padding-left: 10px
+            
+            p
+                a
+                    color: #333333
+                    font-weight: 700
+                    transition: .3s ease
+
+                    &:hover
+                        color: #ffd725
+
+.jash
+    .row
+        .col
+            text-align: center
+
+            ul
+                li
+                    margin-bottom: 10px
+
+                    a
+                        color: #333333
+                        font-weight: 700
+                        transition: .3s ease
+
+                        &:hover
+                            color: #ffd725
+
+.saamalik
+    .saamalik__content
+        ol
+            li
+                ol
+                    li
+                        margin-left: 30px
+                        
+                        &:first-child
+                            margin-top: 10px
+                    
+                    p
+                        margin-left: 30px
+        
+        p
+            a
+                color: #333333
+                font-weight: 700
+                transition: .3s ease
+
+                &:hover
+                    color: #ffd725
+
 footer,
 footer a
     color: #f2f2f2
