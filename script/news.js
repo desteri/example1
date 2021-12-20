@@ -10,7 +10,7 @@ function getNewsItem() {
                 <li class="card mb-4 border-0 border-bottom pb-4" data-num=${prop.dataNum} style="max-width: 100%;">
                     <div class="row g-0">
                         <div class="col-md-4">
-                            <img src="${prop.src}" class="img-fluid" alt="...">
+                            <img src="${prop.src}" class="img-fluid" loading="lazy" alt="...">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
@@ -83,6 +83,17 @@ function getNewsItem() {
         }
 
         getPagination();
+
+        function getImage() {
+            [].forEach.call(document.querySelectorAll("img[data-src]"), function (img) {
+              img.setAttribute("src", img.getAttribute("data-src"));
+              img.onload = function () {
+                img.removeAttribute("data-src");
+              };
+            });
+          }
+          
+        getImage();
     }
     
     window.addEventListener('DOMContentLoaded', () => renderNews());

@@ -9,7 +9,7 @@ function getNewsItem() {
             newsTemplate += `
                 <div class="item">
                     <div class="card">
-                        <img src="${prop.src}" class="card-img-top" alt="...">
+                        <img src="${prop.src}" class="card-img-top" loading="lazy" alt="...">
 
                         <div class="card-body">
                             <h5 class="card-title">${prop.title}</h5>

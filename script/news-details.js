@@ -7,7 +7,7 @@ function getNewsDetails() {
         const newsPost = await result.json();
         const newsTemplate = `
             <div class="card border-0" style="width: 100%;">
-                <img src="${newsPost.src}" class="card-img-top" alt="...">
+                <img src="${newsPost.src}" loading="lazy" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">${newsPost.title}</h5>
                     <h6 class="card-subtitle my-3"><time>24.11.2021</time></h6>
