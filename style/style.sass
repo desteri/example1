@@ -34,8 +34,6 @@ h2
         width: 100px
         height: 3px
 
-    
-
 a
     text-decoration: none
 
@@ -313,7 +311,7 @@ header
         .item
             display: flex
             justify-content: center
-            margin-bottom: 20px
+            margin-bottom: 50px
 
             .card
                 width: 90%
@@ -513,38 +511,55 @@ header
                @media screen and (max-width: 767px)
                     margin-top: 50px     
 
-.news__content
-    ul
-        .card
-            .row
-                .col-md-8
-                    .card-body
-                        .card-title
-                            font-size: 2em
+.news__block
+    .news__content
+    .card
+        display: none
 
-                            a
-                                color: #333333
-                                transition: .3s ease
+        .row
+            .col-md-8
+                .card-body
+                    .card-title
+                        font-size: 2em
 
-                                &:hover
-                                    color: #ffd725
-
-                    .card-footer
-                        display: flex
-                        justify-content: space-between
-                        align-items: center
-
-                        .btn-primary
-                            background-color: #3F9BF0
-                            border-color: transparent
-                            font-weight: 700
+                        a
+                            color: #333333
+                            transition: .3s ease
 
                             &:hover
-                                background-color: #ffd725
-                                color: #333333
+                                color: #ffd725
 
-                        .card-text
-                            color: #004978
+                .card-footer
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+
+                    .btn-primary
+                        background-color: #3F9BF0
+                        border-color: transparent
+                        font-weight: 700
+
+                        &:hover
+                            background-color: #ffd725
+                            color: #333333
+
+                    .card-text
+                        color: #004978
+
+    .paginator
+        border-collapse: collapse
+
+        .page-item
+            display: table-cell
+            border: 1px solid #3F9BF0
+            padding: 3px 10px
+            cursor: pointer
+            color: #3F9BF0
+            transition: .3s ease
+
+            &:hover
+                color: #ffd725
+                background-color: #3F9BF0
 
 .news-details
     .col
@@ -562,7 +577,7 @@ header
             padding: 0.5rem 0
 
             button,
-            button a
+            a
                 color: #333333
                 font-size: 1.2em
                 transition: .3s ease
