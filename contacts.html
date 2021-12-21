@@ -102,9 +102,11 @@
 
     <main>
         <div class="container contacts my-5">
-            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 justify-content-between align-items-center">
+            <h2 class="text-center mb-5">Контакты</h2>
+
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 justify-content-between">
                 <div class="col">
-                    <h2 class="text-center mb-5">Местонахождение</h2>
+                    <h5 class="text-center mb-5">Местонахождение</h5>
     
                     <div class="list">
                         <div class="list-item">
@@ -143,18 +145,20 @@
                     </div>
                 </div>
                 <div class="col">
+                    <h5 class="text-center mb-5">Форма обратной связи</h5>
+
                     <form>
-                        <label for="fname">Ваше ФИО:</label>
+                        <label for="fname">ФИО:</label>
                         <input type="text" id="fname" placeholder="Введите Ваше ФИО...">
 
-                        <label for="tel">Ваш номер телефона:</label>
+                        <label for="tel">Номер телефона:</label>
                         <input type="text" id="tel" placeholder="Введите Ваш номер телефона...">
 
-                        <label for="email">Вашу почту:</label>
+                        <label for="email">Email:</label>
                         <input type="text" id="email" placeholder="Введите Вашу почту...">
 
-                        <label for="msg">Введите ваше сообщение:</label>
-                        <textarea name="msg" id="msg" placeholder="Введите Ваше сообщение..." style="height:200px;max-height:500px"></textarea>
+                        <label for="msg">Сообщение:</label>
+                        <textarea name="msg" id="msg" placeholder="Введите Ваше сообщение..." style="height:200px; max-height:400px"></textarea>
 
                         <div>
                             <input type="submit" value="Отправить">
