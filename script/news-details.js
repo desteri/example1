@@ -24,7 +24,6 @@ function getNewsDetails() {
         news.insertAdjacentHTML('afterbegin', newsTemplate);
     }
 
-    
     window.addEventListener('DOMContentLoaded', () => renderNews());
 }
 

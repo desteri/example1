@@ -12,8 +12,8 @@ function getNewsItem() {
                         <img src="${prop.src}" class="card-img-top" loading="lazy" alt="...">
 
                         <div class="card-body">
-                            <h5 class="card-title">${prop.title}</h5>
-                            <p class="card-text">${prop.text.slice(0, 100)}...</p>
+                            <h5 class="card-title">${prop.title.slice(0, 60)}...</h5>
+                            <p class="card-text">${prop.text.slice(0, 150)}...</p>
                             <div class="d-flex">
                                 <a href="./news-details.html?id=${prop.id}" class="btn btn-primary">Подробнее</a>
                                 <p class="card-text"><time>24.11.2021</time></p>

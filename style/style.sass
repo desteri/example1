@@ -76,6 +76,7 @@ header
         top: 0
         right: 0
         left: 0
+        box-shadow: 0 5px 10px -10px #000000
         z-index: 9999
 
         .navbar
@@ -132,15 +133,15 @@ header
                                 &:last-child
                                     .nav-link
                                         border: none
+
+                .offcanvas-header
+                    padding: 1rem 1.5rem
                                     
                 .offcanvas-body
                     .navbar-nav
                         font-family: $roboto
                         font-size: 1.2em
                         font-weight: 500
-
-                        @media screen and (max-width: 1121px)
-                            font-size: 1em
 
                         .nav-item
                             display: flex
@@ -830,6 +831,10 @@ header
 
                 &:hover
                     color: #ffd725
+
+    .photo__content .item 
+        margin: 0 10px
+
 
 footer,
 footer a
